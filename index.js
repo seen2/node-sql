@@ -33,7 +33,7 @@ app.get("/todos/:id", async (req, res) => {
   }
 });
 
-app.post("/todo", async (req, res) => {
+app.post("/todos", async (req, res) => {
   try {
     const { description } = req.body;
     const result = await pool.query(
@@ -46,7 +46,7 @@ app.post("/todo", async (req, res) => {
   }
 });
 
-app.delete("/todo/:id", async (req, res) => {
+app.delete("/todos/:id", async (req, res) => {
   try {
     const { id } = req.params;
     const result = await pool.query("DELETE FROM TODOS WHERE todo_id=$1", [id]);
@@ -57,7 +57,7 @@ app.delete("/todo/:id", async (req, res) => {
   }
 });
 
-app.put("/todo/:id", async (req, res) => {
+app.put("/todos/:id", async (req, res) => {
   try {
     const { id } = req.params;
     const { description } = req.body;

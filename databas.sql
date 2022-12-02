@@ -5,7 +5,7 @@ CREATE TABLE TODOS(
   description VARCHAR(255)
 );
 --sudo apt install postgresql postgresql-contrib
---service postgresql start
+--sudo service postgresql start
 -- su - postgres
 -- Change the user to postgres :
 --sudo -i -u postgres
